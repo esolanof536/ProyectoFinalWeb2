@@ -191,6 +191,7 @@ header #button-menu{
 	width: 800px;
 	max-width: 90%;
 	margin: 30px auto;
+    background-color: #FFE7BE;
 }
 
 ul.tabs{
@@ -228,7 +229,7 @@ ul.tabs li a .tab-text{
 
 .secciones{
 	width: 100%;
-	background: #fff;
+	background: #FFE7BE;
 }
 
 .secciones article{
@@ -267,22 +268,48 @@ ul.tabs li a .tab-text{
 /*#region SECCIONES CSS*/
 
 .secciones h4 {
-    font-size: 22px;
+    font-size: 30px;
     margin-bottom: 20px;
     font-family: 'calibri';
   }
   
   .controls {
     width: 50%;
-    background: #24303c;
+    background: #552525;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid #1f53c5;
+    border: 1px solid #FFE7BE;
     font-family: 'calibri';
     font-size: 18px;
     color: white;
     margin-left: 250px;
+  }
+
+  .controls2 {
+    width: 20%;
+    background: #552525;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #FFE7BE;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+    margin-left: 10px;
+  }
+
+  .controls3 {
+    width: 20%;
+    background: #552525;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #FFE7BE;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+    margin-left: 270px;
   }
   
   .secciones p {
@@ -305,7 +332,7 @@ ul.tabs li a .tab-text{
 
 .botons {
     width: 50%;
-    background: #1f53c5;
+    background: #b80b0e;
     border: none;
     padding: 12px;
     color: white;
@@ -322,7 +349,7 @@ ul.tabs li a .tab-text{
 
 .botons2 {
     width: 25%;
-    background: #1f53c5;
+    background: #b80b0e;
     border: none;
     padding: 12px;
     color: white;
@@ -360,14 +387,74 @@ ul.tabs li a .tab-text{
     font-size: 20px;
     margin-left: 250px;
 }
+
+
  
 .formulario > div {
     padding: 20px 0;
     border-bottom: 1px solid #ccc;
 }
 
+/*Buscador de */
+.wrap2 {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 20px;
+    /*margin: auto;*/
+}
+ 
+.formulario2 h2 {
+    font-size: 22px;
+    color: #001F3F;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-family: 'calibri';
+}
 
+.formulario2 label {
+    font-family: 'calibri';
+    font-size: 20px;
+    margin-left: 250px;
+}
 
+.formulario2 label {
+    font-family: 'calibri';
+    font-size: 20px;
+    margin-left: 10px;
+}
+ 
+.formulario > div {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/*Buscador de */
+.wrap3 {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 20px;
+    /*margin: auto;*/
+}
+ 
+.formulario3 h2 {
+    font-size: 22px;
+    color: #001F3F;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-family: 'calibri';
+}
+
+.formulario3 label {
+    font-family: 'calibri';
+    font-size: 20px;
+    margin-left: 450px;
+}
+
+ 
+.formulario3 > div {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
 /*#endregion ESTILOCHECKBOX*/
 
 
@@ -381,7 +468,7 @@ select {
     outline:0;
     box-shadow:none;
     border:0!important;
-    background: #24303c;
+    background: #552525;
     background-image: none;
     flex: 1;
     padding: 0 .5em;
@@ -397,14 +484,16 @@ select {
  }
  .select {
 /*    position: relative;
-*/   display: flex;
-    width: 50%;
-    height: 3.5em;
+*/   display: inline-flex;
+    width: 20%;
+    height: 3.0em;
     line-height: 3;
-    background: #24303c;
+    background: #552525;
     overflow: hidden;
     border-radius: .25em;
-    margin-left: 250px;
+    margin-left: 10px;
+    margin-top: 20px;
+    
  }
  .select::after {
     content: '\25BC';
@@ -412,7 +501,7 @@ select {
     top: 0;
     right: 0;
     padding: 0 1em;
-    background: #2b2e2e;
+    background: #696161;
     cursor:pointer;
     pointer-events:none;
     transition:.25s all ease;
@@ -471,7 +560,7 @@ th, td{
 
 thead{
     
-	background-color: #34495E;
+	background-color: #951113;
 	border-bottom: solid 5px #575D69;
 	color: white;
 }
