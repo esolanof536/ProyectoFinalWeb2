@@ -2082,9 +2082,13 @@ function GoAdmin() {
 
 function CerrarSesion() {
 
-	window.location.href = "index.html";
-	elimTcookies();
-	VaciarC();
+	if (confirm('Desea cerrar sesiÃ³n?')) {
+		window.location.href = "LogIn.html";
+		elimTcookies();
+		VaciarC();
+	  } else {
+
+	  }
 }
 
 
@@ -2665,7 +2669,7 @@ function CabmiarContra() {
 
 	} else if (nueva != confirm) {
 
-		alert('Las contraseñas no coinciden');
+		alert('Las contraseï¿½as no coinciden');
 
 	} else {
 

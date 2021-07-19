@@ -634,3 +634,40 @@ tr:hover td{
     font-size: 15px;
     margin-left: 63%;
 }
+
+
+/* Estilos para el Log In */
+.DivLogIn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14%;
+  }
+
+.DivLogIn2{
+    align-items: center;
+}
+
+.lblUsuario{
+    margin: 2%;
+    width: 50%;
+    font-size: 15px;
+}
+
+.lblPassword{
+    margin: 2%;
+    width: 50%;
+    font-size: 15px;
+}
+
+.btnLogIn{
+    background: #b80b0e;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px;
+    font-size: 16px;
+    width: 100%;
+}
+
+
