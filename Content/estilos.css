@@ -272,6 +272,13 @@ ul.tabs li a .tab-text{
     margin-bottom: 20px;
     font-family: 'calibri';
   }
+
+  .secciones p {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'calibri';
+  }
+
   
   .controls {
     width: 50%;
@@ -301,6 +308,7 @@ ul.tabs li a .tab-text{
 
   .controls3 {
     width: 20%;
+    display: inline-block;
     background: #552525;
     padding: 10px;
     border-radius: 4px;
@@ -309,7 +317,7 @@ ul.tabs li a .tab-text{
     font-family: 'calibri';
     font-size: 18px;
     color: white;
-    margin-left: 270px;
+    margin-left: 10px;
   }
   
   .secciones p {
@@ -359,6 +367,25 @@ ul.tabs li a .tab-text{
     cursor: pointer;
 }
 
+.botons3 {
+    width: 200px;
+    background: #b80b0e;
+    display: inline-block;
+    padding: 10px 0px;
+    color: white;
+    margin: 16px;
+    font-size: 20px;
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'calibri';
+    
+}
+
+.botons3 i{
+    margin-right: 10px;
+}
     .botons2 a:hover {
         color: white;
         text-decoration: underline;
@@ -375,8 +402,8 @@ ul.tabs li a .tab-text{
 }
  
 .formulario h2 {
-    font-size: 22px;
-    color: #001F3F;
+    font-size: 28px;
+    color: black;
     margin-bottom: 20px;
     margin-left: 20px;
     font-family: 'calibri';
@@ -404,8 +431,8 @@ ul.tabs li a .tab-text{
 }
  
 .formulario2 h2 {
-    font-size: 22px;
-    color: #001F3F;
+    font-size: 28px;
+    color: black;
     margin-bottom: 20px;
     margin-left: 20px;
     font-family: 'calibri';
@@ -437,8 +464,8 @@ ul.tabs li a .tab-text{
 }
  
 .formulario3 h2 {
-    font-size: 22px;
-    color: #001F3F;
+    font-size: 28px;
+    color: black;
     margin-bottom: 20px;
     margin-left: 20px;
     font-family: 'calibri';
@@ -448,6 +475,7 @@ ul.tabs li a .tab-text{
     font-family: 'calibri';
     font-size: 20px;
     margin-left: 450px;
+    display: inline-block;
 }
 
  
@@ -476,6 +504,7 @@ select {
     cursor:pointer;
     font-size: 1em;
     font-family: 'Open Sans', sans-serif;
+    
  }
  
  
@@ -492,7 +521,6 @@ select {
     overflow: hidden;
     border-radius: .25em;
     margin-left: 10px;
-    margin-top: 20px;
     
  }
  .select::after {
@@ -549,7 +577,7 @@ table{
 	text-align: left;
 	border-collapse: collapse;
     font-family: 'calibri';
-    margin-left: 150px;
+    margin-left: 50px;
 
     
 }
@@ -570,7 +598,7 @@ tr:nth-child(even){
 }
 
 tr:hover td{
-    background-color: #369681;
+    background-color: #2e0506;
 	color: white;
 }
   /*#endregion*/
