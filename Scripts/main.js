@@ -101,4 +101,13 @@ $(document).ready(function () {
 
 }); 
 
+function mostrarAgregarArticulo(seccion) {
+
+	console.log("Mostrando seccion " + seccion)
+
+	$('.secciones article').hide();
+	$(seccion).show();
+}
+
+
 
