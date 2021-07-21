@@ -3,22 +3,22 @@ const { ObjectId } = require('bson');
 const Schema = mongoose.Schema;
 
 const vinoSchema = new Schema({
-    consecutivo:{
+    consecutivo: {
         type: ObjectId,
         ref: "Consecutivos",
         required: true,
-        unique:true,
+        unique: true,
         trim: true
     },
     nombre: {
         type: String,
-        unique:true,
+        unique: true,
         required: true,
         trim: true
     },
     precio: {
         type: Number,
-        required:true
+        required: true
     },
     restaurante: {
         type: ObjectId,
@@ -30,7 +30,7 @@ const vinoSchema = new Schema({
         type: Number,
         get: v => Math.round(v),
         set: v => Math.round(v),
-        
+
     },
     nacionalidad: {
         type: ObjectId,
@@ -42,7 +42,7 @@ const vinoSchema = new Schema({
         type: Number,
         get: v => Math.round(v),
         set: v => Math.round(v),
-        default:0,
+        default: 0,
         required: true
     },
     marca: {
