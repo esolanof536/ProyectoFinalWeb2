@@ -1,15 +1,25 @@
 const mongoose = require('mongoose');
-
+const { ObjectId } = require('bson');
 const Schema = mongoose.Schema;
+const dateFormat = require('dateformat');
+let fechaActual = dateFormat(new Date(), 'dd/mm/yyyy');
 
 const ProveedoresSchema = new Schema({
-
-    nombre: {
+    consecutivo: {
+        type: ObjectId,
+        ref: "Consecutivos",
+        required: true,
+        unique: true,
+        trim: true
+    },
+    nombreRepresentante: {
         type: String,
+        required: true,
         trim: true
     },
     pApellido: {
         type: String,
+        required: true,
         trim: true
     },
     sApellido: {
@@ -18,22 +28,26 @@ const ProveedoresSchema = new Schema({
     },
     telefonoOficina: {
         type: String,
+        required: true,
         trim: true
     },
     fechaIngreso: {
         type: String,
+        default: fechaActual,
         trim: true
     },
     correo: {
         type: String,
+        required: true,
         trim: true
     },
     direccion: {
         type: String,
         trim: true
     },
-    cedula: {
+    cedulaJuridica: {
         type: String,
+        required: true,
         trim: true
     },
     fax: {

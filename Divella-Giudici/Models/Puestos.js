@@ -1,27 +1,34 @@
 const mongoose = require('mongoose');
-
+const { ObjectId } = require('bson');
 const Schema = mongoose.Schema;
 
 const puestosSchema = new Schema({
     consecutivo: {
-        type: String,
-        trim: true,
-        uppercase: true,
+        type: ObjectId,
+        ref: "Consecutivos",
+        required: true,
+        unique: true,
+        trim: true
     },
     nombre: {
         type: String,
+        unique: true,
+        required: true,
         trim: true
     },
     rol: {
-        type: String,
+        type: ObjectId,
+        ref: "Roles",
+        required: true,
         trim: true
     },
     internoRestaurante: {
-        type: String,
-        trim: true
+        type: Boolean,
+        trim: true,
+        default: true,
     },
     externoRestaurante: {
-        type: String,
+        type: Boolean,
         trim: true
     }
 });

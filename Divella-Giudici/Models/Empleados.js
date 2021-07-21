@@ -1,23 +1,29 @@
 const mongoose = require('mongoose');
-
+const { ObjectId } = require('bson');
 const Schema = mongoose.Schema;
 
 const empleadosSchema = new Schema({
-    consecutivo: {
-        type: String,
-        trim: true,
-        uppercase: true,
+    consecutivo:{
+        type: ObjectId,
+        ref: "Consecutivos",
+        required: true,
+        unique:true,
+        trim: true
     },
     cedula: {
         type: String,
+        required: true,
+        unique: true,
         trim: true
     },
     nombre: {
         type: String,
+        required: true,
         trim: true
     },
     pApellido: {
         type: String,
+        required: true,
         trim: true
     },
     sApellido: {
@@ -26,6 +32,7 @@ const empleadosSchema = new Schema({
     },
     telefono1: {
         type: String,
+        required: true,
         trim: true
     },
     telefono2: {
@@ -33,11 +40,14 @@ const empleadosSchema = new Schema({
         trim: true
     },
     puesto: {
-        type: String,
-        trim: true
+        type: ObjectId,
+        ref: "Puestos",
+        required: true,
     },
     restaurante: {
-        type: String,
+        type: ObjectId,
+        ref: "Restaurantes",
+        required: true,
         trim: true
     }
 });

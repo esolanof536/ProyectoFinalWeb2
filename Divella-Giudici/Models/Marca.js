@@ -1,15 +1,19 @@
 const mongoose = require('mongoose');
-
+const { ObjectId } = require('bson');
 const Schema = mongoose.Schema;
 
 const marcaSchema = new Schema({
-    consecutivo: {
-        type: String,
-        trim: true,
-        uppercase: true,
-    },
+    consecutivo :{
+            type: ObjectId,
+            ref: "Consecutivos",
+            required: true,
+            unique:true,
+            trim: true
+        },
     nombreMarca: {
         type: String,
+        required: true,
+        unique:true,
         trim: true
     },
     descripcion: {
@@ -17,15 +21,21 @@ const marcaSchema = new Schema({
         trim: true
     },
     nacionalidad: {
-        type: String,
+        type: ObjectId,
+        ref: "Paises",
+        required: true,
+        unique:true,
         trim: true
     },
-    empresa: {
-        type: String,
+    empresa: {    
+        type: ObjectId,
+        ref: "Proveedores",
+        required: true,
         trim: true
     },
     telefonoEmpresa: {
         type: String,
+        required:true,
         trim: true
     },
     fotoMarca: {
@@ -38,6 +48,7 @@ const marcaSchema = new Schema({
     },
     cedulaJuridica: {
         type: String,
+        required:true,
         trim: true
     },
     detalleEmpresa: {

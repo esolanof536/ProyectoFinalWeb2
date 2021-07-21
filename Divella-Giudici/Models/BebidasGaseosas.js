@@ -1,22 +1,32 @@
 const mongoose = require('mongoose');
+const { ObjectId } = require('bson');
 
 const Schema = mongoose.Schema;
 
 const bebidasGaseosasSchema = new Schema({
     consecutivo: {
-        type: String,
+        type: ObjectId,
+        ref: "Consecutivos",
+        required: true,
+        unique: true,
         trim: true
     },
     nombre: {
         type: String,
-        trim: true
+        trim: true,
+        required: true,
+        unique: true
     },
     marca: {
-        type: String,
+        type: ObjectId,
+        ref: "Marca",
+        required: true,
         trim: true
     },
     nacionalidad: {
-        type: String,
+        type: ObjectId,
+        ref: "Paises",
+        required: true,
         trim: true
     },
     descripcion: {
@@ -24,15 +34,17 @@ const bebidasGaseosasSchema = new Schema({
         trim: true
     },
     precio: {
-        type: Number
+        type: Number,
+        required: true
     },
     restaurante: {
-        type: String,
-        trim: true
+        type: ObjectId,
+        ref: "Paises",
+        required: true
     },
     cantidad: {
-        type: String,
-        trim: true
+        type: Number,
+        default: 0
     },
     foto: {
         type: String,

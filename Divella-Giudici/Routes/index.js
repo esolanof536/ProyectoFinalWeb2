@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const usuarioController = require('../Controllers/usuarioControllers');
-const restauranteController = require('../Controllers/restauranteControllers');
+const restauranteController = require('../Controllers/restaurantesControllers');
 const buffetController = require('../Controllers/buffetController');
 const bCController = require('../Controllers/bebidasCalientesControllers');
 const bHController = require('../Controllers/bebidasHeladasControllers');
@@ -23,6 +23,7 @@ const rolesController = require('../Controllers/rolesController');
 const paisesController = require('../Controllers/paisesController');
 const cajasController = require('../Controllers/paisesController');
 const unidadController = require('../Controllers/unidadesMedidaControllers');
+const consecutivosController = require('../Controllers/consecutivosControllers');
 
 
 
@@ -36,11 +37,11 @@ module.exports = function () {
     router.delete('/usuarios/:id', usuarioController.eliminar)
 
     //Restaurantes
-    router.get('restaurantes', restauranteController.getRestaurantes)
-    router.get('restaurantes/:id', restauranteController.getRestauranteById)
-    router.post('restaurantes', restauranteController.agregar)
-    router.put('restaurantes/:id', restauranteController.actualizar)
-    router.delete('restaurantes/:id', restauranteController.eliminar)
+    router.get('/restaurantes', restauranteController.getLista)
+    router.get('/restaurantes/:id', restauranteController.getById)
+    router.post('/restaurantes', restauranteController.agregar)
+    router.put('/restaurantes/:id', restauranteController.actualizar)
+    router.delete('/restaurantes/:id', restauranteController.eliminar)
 
     //Buffet
     router.get('/buffet', buffetController.lista)
@@ -188,6 +189,13 @@ module.exports = function () {
     router.post('/unidad', unidadController.agregar)
     router.put('/unidad/:id', unidadController.actualizar)
     router.delete('/unidad/:id', unidadController.eliminar)
+
+    //Unidades
+    router.get('/consecutivos', consecutivosController.getLista)
+    router.get('/consecutivos/:id', consecutivosController.getById)
+    router.post('/consecutivos', consecutivosController.agregar)
+    router.put('/consecutivos/:id', consecutivosController.actualizar)
+    router.delete('/consecutivos/:id', consecutivosController.eliminar)
 
     return router;
 }

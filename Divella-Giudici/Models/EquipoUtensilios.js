@@ -1,25 +1,33 @@
 const mongoose = require('mongoose');
-
+const { ObjectId } = require('bson');
 const Schema = mongoose.Schema;
 
 const EquipoUtensiliosSchema = new Schema({
 
-    consecutivo: {
-        type: String,
-        trim: true,
-        uppercase: true,
+    consecutivo:{
+        type: ObjectId,
+        ref: "Consecutivos",
+        required: true,
+        unique:true,
+        trim: true
     },
     nombre: {
         type: String,
+        required: true,
+        unique: true,
         trim: true
     },
     cantidad: {
         type: Number,
         get: v => Math.round(v),
         set: v => Math.round(v),
+        default:0,
+        required:true
     },
     restaurante: {
-        type: String,
+        type: ObjectId,
+        ref: "Restaurantes",
+        required: true,
         trim: true
     },
     descripcion: {
@@ -27,7 +35,9 @@ const EquipoUtensiliosSchema = new Schema({
         trim: true
     },
     marca: {
-        type: String,
+        type: ObjectId,
+        ref: "Marca",
+        required: true,
         trim: true
     },
 

@@ -1,12 +1,11 @@
-const Restaurantes = require('../Models/Restaurante');
+const Restaurantes = require('../Models/Restaurantes');
 
-exports.getRestaurantes = async (req, res, next) => {
+exports.getLista = async (req, res, next) => {
     try {
-        const restaurante = await Restaurantes.find();
-        res.json(restaurante);
-        console.log('getRestaurantes');
+        const lista = await Restaurantes.find();
+        res.json(lista);
     } catch (error) {
-        console.log('exports.getRestaurantes::', error);
+        console.log('exports.getLista::', error);
         res.json({
             Error: error
         })
@@ -14,18 +13,18 @@ exports.getRestaurantes = async (req, res, next) => {
     }
 }
 
-exports.getRestauranteById = async (req, res, next) => {
+exports.getById = async (req, res, next) => {
     try {
         const id = req.params.id;
-        const restaurante = await Restaurantes.findById(id);
-        if (!restaurante) {
+        const elemento = await Restaurantes.findById(id);
+        if (!elemento) {
             res.status(404).json({
                 mensaje: 'El restaurante no ha sido encontrado'
             });
         }
-        res.json(restaurante);
+        res.json(elemento);
     } catch (error) {
-        console.log('exports.getRestauranteById::', error);
+        console.log('exports.getById::', error);
         res.json({
             Error: error
         })
@@ -35,8 +34,8 @@ exports.getRestauranteById = async (req, res, next) => {
 
 exports.agregar = async (req, res, next) => {
     try {
-        const restaurante = new Restaurantes(req.body);
-        await restaurante.save();
+        const elemento = new Restaurantes(req.body);
+        await elemento.save();
         res.json({ mensaje: 'Se creo el restaurante con exito' });
     } catch (error) {
         console.log('exports.agregar::', error);
@@ -67,7 +66,7 @@ exports.actualizar = async (req, res, next) => {
 exports.eliminar = async (req, res, next) => {
     try {
         await Restaurantes.findOneAndRemove({ _id: req.params.id });
-        res.json({ mensaje: 'El restaurante se elimino con exito' });
+        res.json({ mensaje: 'El restaurante se elimino con exito' })
     } catch (error) {
         console.log('exports.eliminar::', error);
         res.json({

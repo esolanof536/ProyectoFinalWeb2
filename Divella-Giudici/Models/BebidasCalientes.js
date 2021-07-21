@@ -1,29 +1,39 @@
 const mongoose = require('mongoose');
+const { ObjectId } = require('bson');
 
 const Schema = mongoose.Schema;
 
 const bebidasCalientesSchema = new Schema({
     consecutivo: {
-        type: String,
+        type: ObjectId,
+        ref: "Consecutivos",
+        required: true,
+        unique:true,
         trim: true
     },
     nombre: {
         type: String,
-        trim: true
+        trim: true,
+        required: true,
+        unique:true
     },
     ingredientes: {
         type: String,
-        trim: true
+        trim: true,
+        required: true
     },
     descripcion: {
         type: String,
         trim: true
     },
     precio: {
-        type: Number
+        type: Number,
+        required:true,
     },
     restaurante: {
-        type: String,
+        type: ObjectId,
+        ref: "Restaurantes",
+        required: true,
         trim: true
     },
     foto: {

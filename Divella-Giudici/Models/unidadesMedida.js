@@ -1,27 +1,34 @@
 const mongoose = require('mongoose');
-
+const { ObjectId } = require('bson');
 const Schema = mongoose.Schema;
 
 const UnidadesMedidaSchema = new Schema({
     consecutivo: {
-        type: String,
-        trim: true,
-        uppercase: true,
+        type: ObjectId,
+        ref: "Consecutivos",
+        required: true,
+        unique: true,
+        trim: true
     },
     unidadMedida: {
-        type: Number
+        type: String,
+        required:true,
+        unique: true
     },
     escala: {
         type: String,
-            trim: true
+        required:true,
+        trim: true
     },
     detalle: {
         type: String,
-            trim: true
+        trim: true
     },
     simbologia: {
         type: String,
-            trim: true
+        required: true,
+        unique:true,
+        trim: true
     }
 });
 

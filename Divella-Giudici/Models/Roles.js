@@ -1,15 +1,19 @@
 const mongoose = require('mongoose');
-
+const { ObjectId } = require('bson');
 const Schema = mongoose.Schema;
 
 const rolesSchema = new Schema({
     consecutivo: {
-        type: String,
-        trim: true,
-        uppercase: true,
+        type: ObjectId,
+        ref: "Consecutivos",
+        required: true,
+        unique: true,
+        trim: true
     },
     nombre: {
         type: String,
+        required: true,
+        unique: true,
         trim: true
     },
     descripcion: {
