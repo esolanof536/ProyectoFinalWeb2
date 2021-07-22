@@ -1066,44 +1066,24 @@
                     <br>
 
                     <ul class="tabla">
-                        <table>
-                            <tr>
-                                <thead>
-                                    <th>ID</th>
-                                    <th>Productos</th>
-                                    <th>Productos</th>
-                                    <th colspan="3">Productos</th>
-                                </thead>
-                            </tr>
-                            <tr>
-                                <td>day</td>
-                                <td>resultado[w] </td>
-                                <td>resultado[q] </td>
-                                <td>"resultado[y]</td>
-                                <td> <input type="button" class="botons2" value="Editar"
-                                        onclick="agregarCarritoLibro()"></td>
-                                <td> <input type="button" class="botons2" value="Eliminar" onclick=""></td>
-                            </tr>
-                            <tr>
-                                <td>day</td>
-                                <td>resultado[w] </td>
-                                <td>resultado[q] </td>
-                                <td>"resultado[y]</td>
-                                <td> <input type="button" class="botons2" value="Editar"
-                                        onclick="agregarCarritoLibro()"></td>
-                                <td> <input type="button" class="botons2" value="Eliminar" onclick=""></td>
-                            </tr>
-                            <tr>
-                                <td>day</td>
-                                <td>resultado[w] </td>
-                                <td>resultado[q] </td>
-                                <td>"resultado[y]</td>
-                                <td> <input type="button" class="botons2" value="Editar"
-                                        onclick="agregarCarritoLibro()"></td>
-                                <td> <input type="button" class="botons2" value="Eliminar" onclick=""></td>
-                            </tr>
-
-                        </table>
+                        
+                         
+                          
+                                <table >
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Consecutivo</th>
+                                            <th>Descripcion</th>
+                                            <th>Tipo</th>
+                                            <th colspan="3">Valor de Consecutivo</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbConsecutivos"></tbody>
+                                </table>
+                     
+            
                     </ul>
                     </ul>
             </div>
@@ -1124,20 +1104,12 @@
             <br>
             <br>
            
-            <label for="format" class="formulario">Tipo de Consecutivo: </label>
-            <div class="select">
-                <select name="format" id="selectRoll">
+            <label for="TDconsecu" class="formulario3">Tipo de Consecutivo: </label>
 
-                    <option selected>Tipo de Consecutivo</option>
-                    <option value="TurinAnivo">Turin Anivo</option>
-                    <option value="PiccolaStella">Piccola Stella</option>
-                    <option value="NottediFuoco">Notte di Fuoco</option>
-
-                </select>
-            </div>
+            <input class="controls3" type="text" name="Usuario" id="TDconsecu" value="">
             <br>
-                    <label for="descripcionC" class="formulario">Descripción: </label>
-                    <input class="controls" type="text" name="Nombre" id="descripcionC" value="">
+                    <label for="descripcionCN" class="formulario">Descripción: </label>
+                    <input class="controls" type="text" name="Nombre" id="descripcionCN" value="">
                   
             <br>
             <br>
@@ -1153,14 +1125,14 @@
       
             <br>
             <br>
-            <label for="Prefijo" class="formulario">Prefijo: </label>
-            <input class="controls" type="text" name="Usuario" id="Prefijo" value="">
+            <label for="PrefijoC" class="formulario">Prefijo: </label>
+            <input class="controls" type="text" name="Usuario" id="PrefijoC" value="">
            
 
             <br>
             <br>
-            <input class="botons" type="button" size="30" maxlength="10" value="Confirmar Consecutivo" onclick="crearUsuario()">
-            <input class="botons" type="button" size="30" maxlength="10" value="Cancelar" onclick="crearUsuario()">
+            <input class="botons" id ="btnCconsecutivo" type="button" size="30" maxlength="10" value="Confirmar Consecutivo" >
+            <input class="botons" onclick="Limpiar()" id ="btnLimpiarC" type="button" size="30" maxlength="10" value="Cancelar">
          
 
             </ul>
@@ -1652,6 +1624,10 @@
         </article>
         <!-- #endregion -->
     </div>
+
+
+    <script src="js/globalsConsecutivos.js" type="text/javascript"></script>
+    <script src="js/administrarConsecutivos.js" type="text/javascript"></script>
 </body>
 
 </html>
