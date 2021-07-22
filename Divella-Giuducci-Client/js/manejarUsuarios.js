@@ -15,10 +15,11 @@
         valorConsecutivo = document.querySelector('#valorConsecutivo');
         btnAceptar = document.querySelector('#btnAceptar');
         btnLimpiar = document.querySelector('#btnLimpiarC');
-        await fetchConsecutivos();
+        await getBases();
         bind();
         await tabla();
     };
+
     const bind = () => {
         consecutivo.onchange = infoTarget;
         tipo.onchange = infoTarget;
@@ -30,7 +31,7 @@
 
     const infoTarget = (e) => {
         const { name, value } = e.target;
-        //console.log(name, ':', value)
+        console.log(name, ':', value)
         consecu[name] = value;
     };
 
@@ -58,7 +59,7 @@
             btnAceptar.innerHTML = "Aceptar";
         }
 
-        await fetchConsecutivos();
+        await getBases();
         tabla();
         limpiarDatos();
     };
@@ -107,5 +108,17 @@
 
     };
 
+    const eliminarConsecutivo = (e) => {
+        let btnEliminar = e.target;
+        let id = parseInt(btnEliminar.dataset.id);
+        let pos = id - 1;
+
+        listaConsecutivos.splice(pos, 1);
+
+        limpiarDatos();
+        tabla();
+    };
+
     inicializar();
+    
 })();
