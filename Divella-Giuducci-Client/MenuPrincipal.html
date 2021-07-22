@@ -1779,12 +1779,12 @@
                             <br>
                             <h4>Lista de Comida estilo Bufet</h4>
 
-                            <label for="CCodigo" class="formulario3">Código de la Comida </label>
+                            <label for="BCodigo" class="formulario3">Código de la Comida </label>
 
-                            <input class="controls3" type="text" name="Usuario" id="CCodigo" value="">
+                            <input class="controls3" type="text" name="Usuario" id="BCodigo" value="">
                             <br>
-                            <label for="Codigo" class="formulario3">Nombre de la Comida </label>
-                            <input class="controls3" type="text" name="Codigo" id="Codigo" value="">
+                            <label for="BNombre" class="formulario3">Nombre de la Comida </label>
+                            <input class="controls3" type="text" name="Codigo" id="BNombre" value="">
                             <br>
                             <br>
                             <a class="botons3">
@@ -1806,9 +1806,11 @@
                                 <table>
                                     <tr>
                                         <thead>
-                                            <th>ID</th>
-                                            <th>Productos</th>
-                                            <th>Productos</th>
+                                            <th>consecutivo</th>
+                                            <th>nombre</th>
+                                            <th>Precio</th>
+                                            <th>Tipo de Comida</th>
+                                            <th>Unidad de Medida</th>
                                             <th colspan="3">Productos</th>
                                         </thead>
                                     </tr>
@@ -1872,26 +1874,23 @@
                     <input class="controls" type="text" name="Codigo" id="fotoPro" value="">
                     <br>
                     <br>
+                    <label for="selectRoll" class="formulario">Tipo: </label>
                     <div class="select">
-                        <label for="selectRoll" class="formulario">Tipo</label>
                         <select name="format" id="selectRoll">
-
                             <option selected>Tipo</option>
-                            <option value="ASistema">Administrador del Sistema</option>
-                            <option value="ASeguridad">Administrador de Seguridad</option>
-                            <option value="ARestaurante">Administrador del Restaurante</option>
-                            <option value="ACuentas">Administrador de Cuentas</option>
+                            <option value="ASistema">Comida Marina</option>
+                            <option value="ASeguridad">Comida Vegetal</option>
+                            <option value="ARestaurante">Frutas</option>
+                            <option value="ACuentas">Comida mediterránea</option>
 
                         </select>
                     </div>
                     <br>
                     <br>
                     <label for="format" class="formulario">Restaurante: </label>
-
                     <div class="select">
                         <select name="format" id="selectRoll">
-
-                            <option selected>Unidad de medida</option>
+                            <option selected>Restaurante</option>
                             <option value="TurinAnivo">Turin Anivo</option>
                             <option value="PiccolaStella">Piccola Stella</option>
                             <option value="NottediFuoco">Notte di Fuoco</option>
@@ -1899,7 +1898,8 @@
                     </div>
                     <br>
                     <br>
-                    <input type="file" name="" id="">
+                    <label for="format" class="formulario">Imagen: </label>
+                    <input type="file" name="format" id="BImagen">
                     <br>
                     <br>
                     <input class="botons" type="button" size="30" maxlength="10" value="Confirmar Platillo"
